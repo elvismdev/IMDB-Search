@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 import { SearchComponent } from './search/search.component';
 import { DetailComponent } from './detail/detail.component';
+import { SummaryComponent } from './summary/summary.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     SearchComponent,
-    DetailComponent
+    DetailComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,
