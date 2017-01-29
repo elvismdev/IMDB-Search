@@ -8,6 +8,7 @@ import { OmdbIdService } from '../omdb-id.service';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent {
+  @Input() id: string;
   movie$: Observable<any>;
 
   constructor(private omdbIdService: OmdbIdService) {
