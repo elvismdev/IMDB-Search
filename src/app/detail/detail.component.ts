@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { OmdbIdService } from '../omdb-id.service';
 
 @Component({
   selector: 'myapp-detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.css']
 })
-export class DetailComponent implements OnInit {
+export class DetailComponent {
+  movie$: Observable<any>;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private omdbIdService: OmdbIdService) {
+    this.getMovie(id);
   }
+
+  getMovie(id: string) {
+   this.movie$ = this.omdbIdService.getMovieById(id);
+ }
 
 }
